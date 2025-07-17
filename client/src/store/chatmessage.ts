@@ -34,7 +34,6 @@ const useChattStore = create<ChattStore>()((set, get) => ({
   logout: ()=>{
     socket.disconnect()
     set({user: ""})
-    window.location.reload();
   },
   setOnlineUsers: (lists)=>{
     let lists2 = lists.filter(item => item !== get().user);
